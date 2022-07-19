@@ -87,6 +87,44 @@ body {
   margin-right: 0;
 }
 
+.category-products {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+}
+
+.category-item {
+  margin-right: 40px;
+}
+
+.category-item:last-child {
+  margin-right: 0;
+}
+
+.category-link {
+  display: block;
+  width: 160px;
+}
+
+.category-image-wrapper {
+  display: flex;
+  width: 160px;
+  height: 160px;
+  background-color: #ffe17f;
+  margin-bottom: 32px;
+}
+
+.category-image {
+  display: block;
+  margin: auto;
+}
+
 /* Стили Футера */
 
 .page-footer {
