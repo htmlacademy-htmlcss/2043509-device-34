@@ -1,12 +1,126 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="stylesheet" href="./styles/style.css">
   </head>
+
   <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
-
+    <header class="page-header">
+      <a class="main-logo-link" href="#">
+        <img src="images/main-logo.svg" alt="Логотип сайта Device." width="145" height="36"></a>
+      <nav class="navigation">
+        <div class="navigation-user-wrapper">
+          <form class="site-searching" action="https://echo.htmlacademy.ru/" method="post">
+            <input class="site-searching-input" type="search" placeholder="Поиск по сайту" name="site-searching"
+              aria-label="Поиск по сайту.">
+            <button class="site-searching-button" type="submit">Найти</button>
+          </form>
+          <a class="navigation-user-link sign-in-link" href="#">Войти</a>
+          <a class="navigation-user-link compare-link" href="#">Сравнить</a>
+          <a class="navigation-user-link cart-link" href="#">Корзина</a>
+        </div>
+        <div class="site-navigation-wrapper">
+          <div class="catalog-menu">
+            <button class="catalog-menu-button" type="button">Каталог товаров</button>
+            <ul class="catalog-menu-list">
+              <li class="catalog-menu-item">
+                <a class="catalog-menu-link" href="#">Виртуальная реальность</a>
+              </li>
+              <li class="catalog-menu-item">
+                <a class="catalog-menu-link" href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="catalog-menu-item">
+                <a class="catalog-menu-link" href="#">Квадрокоптеры</a>
+              </li>
+              <li class="catalog-menu-item">
+                <a class="catalog-menu-link" href="#">Моноподы для селфи</a>
+              </li>
+              <li class="catalog-menu-item">
+                <a class="catalog-menu-link" href="#">Умные часы</a>
+              </li>
+              <li class="catalog-menu-item">
+                <a class="catalog-menu-link" href="#">Экшн-камеры</a>
+              </li>
+            </ul>
+          </div>
+          <div class="site-navigation">
+            <ul class="site-navigation-list">
+              <li class="site-navigation-item">
+                <a class="site-navigation-link" href="#">Доставка</a>
+              </li>
+              <li class="site-navigation-item">
+                <a class="site-navigation-link" href="#">Гарантия</a>
+              </li>
+              <li class="site-navigation-item">
+                <a class="site-navigation-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="main-index">
+      <h1 class="visually-hidden">Сайт интернет-магазина Device.</h1>
+      <section class="promo">
+        <h2 class="visually-hidden">Промо-слайдер.</h2>
+        <div class="slider-image-wrapper">
+          <img class="promo-slider-image" src="./images/content-images/slider-copter.png" alt="Квадрокоптер с лазером.">
+          <div class="slider-controls">
+            <button class="slider-button slider-prev" type="button">
+              <span class="visually-hidden">Предыдущее фото</span>
+            </button>
+            <button class="slider-button slider-next" type="button">
+              <span class="visually-hidden">Следующее фото</span>
+            </button>
+          </div>
+          <div class="slider-description-wrapper">
+            <span class="product-number">01</span>
+            <h3 class="slider-title">Порхает как бабочка,
+              жалит как пчела!</h3>
+            <p class="slider-subtitle">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
+              замаскированным под стандартную камеру.
+            </p>
+            <div class="pagination-wrapper">
+              <a class="slider-detail-link" href="#">Подробнее</a>
+              <ul class="slider-pagination">
+                <li class="slider-pagination-item">
+                  <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                    <span class="visually-hidden">1 товар.</span>
+                  </button>
+                </li>
+                <li class="slider-pagination-item">
+                  <button class="slider-pagination-button" type="button">
+                    <span class="visually-hidden">2 товар</span>
+                  </button>
+                </li>
+                <li class="slider-pagination-item">
+                  <button class="slider-pagination-button" type="button">
+                    <span class="visually-hidden">3 товар</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="product-characteristics-container">
+              <div class="product-characteristics-wrapper">
+                <span class="product-characteristic">800 м</span>
+                <span class="product-definition">Дальность полета</span>
+              </div>
+              <div class="product-characteristics-wrapper">
+                <span class="product-characteristic">50 м</span>
+                <span class="product-definition">Радиус поражения</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer"></footer>
   </body>
+
 </html>
