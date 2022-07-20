@@ -40,7 +40,7 @@ body {
   min-height: 100vh;
   width: 1440px;
   color: #000000;
-  background-color: #f2f2f2;
+  background-color: #ffffff;
   padding: 40px 0 0;
   margin: 0 auto;
 }
@@ -89,7 +89,7 @@ body {
 
 .category-products {
   max-width: 1160px;
-  margin: 0 auto;
+  margin: 0 auto 70px;
 }
 
 .category-list {
@@ -97,6 +97,7 @@ body {
   flex-wrap: wrap;
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 .category-item {
@@ -123,6 +124,73 @@ body {
 .category-image {
   display: block;
   margin: auto;
+}
+
+/* Секция сервисы */
+
+.services {
+  position: relative;
+  display: flex;
+  width: 1440px;
+  margin: 0 auto 142px;
+  padding: 0 140px;
+}
+
+.services-items {
+  padding-top: 64px;
+  margin-right: 116px;
+}
+
+.services::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 102px;
+  left: 0;
+  display: block;
+  width: 1440px;
+  min-height: 290px;
+  background-color: #f0f0f0;
+}
+
+.services-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.services-description {
+  padding: 72.5px 63px 72.5px 0;
+}
+
+.services-description-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.services-description-item {
+  display: none;
+}
+
+.services-description-item-active {
+  display: block;
+}
+
+.service-title {
+  max-width: 452px;
+  padding: 0;
+  margin: 0 0 34px;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 50px;
+}
+
+.service-subtitle {
+  max-width: 452px;
+  padding: 0;
+  margin: 0;
 }
 
 /* Стили Футера */
