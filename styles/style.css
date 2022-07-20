@@ -72,18 +72,29 @@ body {
   top: -20px;
 }
 
-.product-characteristics-container {
+
+/* Стили Промо-слайдера */
+
+.slider-item {
+  display: none;
+}
+
+.slider-item-active {
+  display: block;
+}
+
+.product-characteristics-list {
   display: flex;
   flex-wrap: wrap;
 }
 
-.product-characteristics-wrapper {
+.product-characteristics-item {
   display: grid;
   row-gap: 12px;
   margin-right: 20px;
 }
 
-.product-characteristics-wrapper:last-child {
+.product-characteristics-item:last-child {
   margin-right: 0;
 }
 
