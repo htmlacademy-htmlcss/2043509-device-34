@@ -449,3 +449,68 @@ body {
   max-width: 560px;
   margin: 0 0 144px 0;
 }
+
+/* Стили страницы каталога */
+
+.page-header-catalog {
+  padding-bottom: 38px;
+  margin-bottom: 35px;
+}
+
+.title-wrapper {
+  max-width: 1080px;
+  margin: 0 auto 35px;
+}
+
+.catalog-title {
+  color: #000000;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 800;
+  margin: 0 0 16px;
+}
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.breadcrumbs-item {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.breadcrumbs-item:not(:last-child) {
+  margin-right: 36px;
+}
+
+.breadcrumbs-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.breadcrumbs-item:last-child .breadcrumbs-link {
+  pointer-events: none;
+}
+
+/* Стили секций фильтрации и сортировки */
+
+.catalog-content-container {
+  width: inherit;
+  background-color: #f0f0f0;
+}
+
+.catalog-content-wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 320px 840px;
+}
+
+.filters {
+  padding: 25px 60px 0;
+}
