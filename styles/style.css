@@ -756,7 +756,26 @@ body {
 }
 
 .services-description-item {
-  display: block;
+  display: none;
+  width: 730px;
+}
+
+.services-description-item-delivery {
+  background-image: url("../images/icons/delivery-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 558px;
+}
+
+.services-description-item-insurance {
+  background-image: url("../images/icons/insurance-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 558px;
+}
+
+.services-description-item-credit {
+  background-image: url("../images/icons/credit-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 558px;
 }
 
 .services-description-item-active {
@@ -777,6 +796,75 @@ body {
   max-width: 480px;
   padding: 0;
   margin: 0;
+}
+
+/* Секция доставка на заказ */
+
+.delivery-link {
+  position: relative;
+  width: 1160px;
+  display: block;
+  padding: 40px 125px 37px;
+  color: #000000;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 23px;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+.delivery-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 125px;
+  min-height: 100%;
+  background-color: #ffe17f;
+  background-image: url("../images/icons/cargo-car.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.delivery-link::after {
+  content: "";
+  position: absolute;
+  right: 42.5px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 40px;
+  min-height: 40px;
+  background-color: rgba(220, 220, 220, 0.5);
+  border-radius: 50%;
+  background-image: url("../images/icons/i-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.3;
+}
+
+.delivery-link:hover.delivery-link::after {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.delivery-link:hover.delivery-link::before {
+  background-color: #ffc700;
+  transition: 0.5s;
+}
+
+.delivery-link:active {
+  opacity: 0.3;
+}
+
+.delivery-link:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 6px #af4fff;
 }
 
 /* Секции О нас, Контакты */
