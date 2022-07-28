@@ -31,6 +31,7 @@
 html {
   font-family: "Rubik", "Arial", sans-serif;
   font-size: 18px;
+  font-weight: 400;
   line-height: 30px;
 }
 
@@ -69,7 +70,6 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: inherit;
   font-family: "Raleway", "Arial", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -78,16 +78,19 @@ body {
   text-transform: uppercase;
   border: none;
   background-color: inherit;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 0;
 }
 
 .page-button::before {
   content: "";
   position: absolute;
-  width: 104%;
+  width: inherit;
   height: 8px;
   background-color: #ffe17f;
-  top: 30%;
-  left: -5px;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: -1;
 }
 
@@ -553,19 +556,14 @@ body {
 }
 
 .slider-subtitle {
-  margin: 0 0 61px;
+  margin: 0 0 50px;
 }
 
 .slider-detail-link {
-  position: relative;
-  left: 8px;
+  width: 220px;
   z-index: 1;
-  display: flex;
-  justify-content: center;
   color: #000000;
-  text-decoration: none;
-  margin-bottom: 59px;
-  max-width: 210px;
+  margin-bottom: 49px;
 }
 
 .product-number {
@@ -715,9 +713,13 @@ body {
   background-color: #f0f0f0;
 }
 
+.services-button {
+  width: 160px;
+}
+
 .services-list {
   margin: 0 116px 0 0;
-  padding: 64px 0 65px;
+  padding: 64px 0 62px;
   list-style-type: none;
   border-right: 7px solid #000000;
 }
@@ -729,7 +731,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   width: 280px;
-  padding: 9px 120px 8px 5px;
+  padding: 0 120px 0 0;
 }
 
 .services-item-active {
@@ -842,13 +844,26 @@ body {
   min-height: 40px;
   background-color: rgba(220, 220, 220, 0.5);
   border-radius: 50%;
+}
+
+.delivery-info::after {
+  content: "";
+  position: absolute;
+  right: 42.5px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 40px;
+  min-height: 40px;
+  background-color: transparent;
+  border-radius: 50%;
   background-image: url("../images/icons/i-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.3;
 }
 
-.delivery-link:hover.delivery-link::after {
+.delivery-link:hover .delivery-info::after {
   opacity: 1;
   transition: 0.5s;
 }
@@ -870,14 +885,114 @@ body {
 /* Секции О нас, Контакты */
 
 .columns-wrapper {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 520px 532px;
+  column-gap: 108px;
+  row-gap: 30px;
   margin-bottom: 70px;
 }
 
-.newsletter-form {
-  width: 810px;
-  margin: 0 188px 0 0;
+.about,
+.contacts {
+  position: relative;
+  padding-top: 47px;
+}
+
+.about::before,
+.contacts::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  display: block;
+  width: 84px;
+  height: 7px;
+  background-color: #000000;
+}
+
+.about-title,
+.contacts-title {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+  margin: 0 0 48px;
+}
+
+.about-subtitle,
+.contacts-text {
+  max-width: 500px;
+  margin: 0 0 30px;
+}
+
+.delivery-companies-list {
+  margin: 0 0 30px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.delivery-companies-item {
+  position: relative;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #000000;
+  margin-bottom: 19px;
+  padding-left: 34px;
+}
+
+.delivery-companies-item::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #ffc700;
+  border-radius: 50%;
+}
+
+.delivery-companies-item:nth-child(2) {
+  text-transform: uppercase;
+}
+
+.delivery-companies-item:last-child {
+  margin-bottom: 0;
+}
+
+.about-link {
+  width: 270px;
+}
+
+.contacts-subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  margin: 0 0 15px;
+}
+
+.address {
+  font-style: normal;
+}
+
+.contacts-phone {
+  color: #444444;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.contacts-schedule {
+  padding: 0;
+  margin: 0 0 30px;
+  list-style-type: none;
+}
+
+.feedback-link {
+  width: 259px;
 }
 
 /* Секция рассылки */
@@ -886,7 +1001,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   background-color: #f0f0f0;
-  padding: 74px 133px 56px 141px;
+  padding: 64px 133px 56px 147px;
 }
 
 .newsletter-title {
@@ -901,7 +1016,13 @@ body {
 
 .newsletter-subtitle {
   max-width: 560px;
-  margin: 0 0 144px 0;
+  margin: 9px 0 0;
+  vertical-align: middle;
+}
+
+.newsletter-form {
+  width: 810px;
+  margin: 0 188px 0 0;
 }
 
 /* Стили страницы каталога */
