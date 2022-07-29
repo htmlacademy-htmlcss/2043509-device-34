@@ -1021,8 +1021,48 @@ body {
 }
 
 .newsletter-form {
-  width: 810px;
-  margin: 0 188px 0 0;
+  max-width: 810px;
+  margin: auto 0;
+  display: flex;
+}
+
+.newsletter-form-input {
+  width: 551px;
+  background-color: inherit;
+  border: none;
+  border-bottom: 3px solid #c4c4c4;
+  font-family: inherit;
+  padding: 16px 0 11px 12px;
+}
+
+.newsletter-form-input::placeholder {
+  color: inherit;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 30px;
+  opacity: 0.5;
+}
+
+.newsletter-button {
+  color: #000000;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 15px 35px 15px;
+  cursor: pointer;
+  border: 3px solid #c4c4c4;
+}
+
+.newsletter-text-info {
+  max-width: 160px;
+  margin: 0 9px 0 auto;
+  padding-left: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 /* Стили страницы каталога */
