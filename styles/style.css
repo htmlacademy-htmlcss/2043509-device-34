@@ -39,7 +39,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  width: 1440px;
+  /* width: 1440px; */
   color: #444444;
   background-color: #ffffff;
   padding: 40px 0 0;
@@ -303,26 +303,19 @@ body {
   position: relative;
 }
 
-.catalog-menu-popup {
+.catalog-menu-list {
   position: absolute;
+  grid-template-columns: 252px 211px 211px;
+  margin: 0;
+  padding: 0 0 45px 60px;
+  list-style-type: none;
   top: 57px;
   left: -60px;
   min-height: 154px;
   width: 1160px;
   background-color: #ffe17f;
-  z-index: 5;
+  z-index: 10;
   display: none;
-}
-
-.catalog-menu-list {
-  position: absolute;
-  display: grid;
-  grid-template-columns: 252px 211px 211px;
-  top: 0;
-  left: 60px;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
 }
 
 .catalog-menu-item {
@@ -352,12 +345,12 @@ body {
   border: none;
   cursor: pointer;
   padding: 15px 67px 15px 0;
+  z-index: 4;
 }
 
 .catalog-menu-button::after {
   content: "";
   position: absolute;
-  z-index: 4;
   right: 0;
   top: 0;
   display: block;
@@ -384,8 +377,8 @@ body {
   transition: 0.5s;
 }
 
-.catalog-menu:focus-within .catalog-menu-popup {
-  display: block;
+.catalog-menu:focus-within .catalog-menu-list {
+  display: grid;
 }
 
 .catalog-menu:focus-within .catalog-menu-button::before {
@@ -403,12 +396,13 @@ body {
 /* Стили Футера */
 
 .page-footer {
-  position: relative;
   background-color: #444444;
   color: #ffffff;
-  padding: 62px 140px 61px;
-  align-items: start;
   margin-top: auto;
+}
+
+.page-footer .container {
+  padding: 62px 0 61px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -420,6 +414,7 @@ body {
 }
 
 .contacts-address {
+  position: relative;
   max-width: 239px;
   margin-right: 119px;
 }
@@ -431,15 +426,15 @@ body {
   row-gap: 58px;
 }
 
-.page-footer::after {
+.contacts-address::after {
   content: "";
   display: block;
   position: absolute;
   width: 80px;
   height: 7px;
   background-color: #ffc700;
-  bottom: 80px;
-  left: 140px;
+  bottom: 20px;
+  left: 0;
 }
 
 .contacts-address-text {
@@ -487,9 +482,9 @@ body {
 
 .footer-social-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, 40px);
   gap: 15px;
-  justify-self: center;
+  justify-content: center;
   margin: 0 6px 0 0;
   padding: 0;
   list-style-type: none;
@@ -549,7 +544,7 @@ body {
   position: relative;
   margin-bottom: 70px;
   padding-bottom: 38px;
-  background-image: linear-gradient(180deg, #ffe17f 114px, #ffffff 114px);
+
 }
 
 .slider-list {
@@ -563,6 +558,7 @@ body {
   display: none;
   grid-template-columns: 560px 560px;
   column-gap: 40px;
+  background-image: linear-gradient(180deg, #ffe17f 114px, #ffffff 114px);
 }
 
 .slider-item-active {
@@ -796,10 +792,11 @@ body {
 
 .services {
   position: relative;
+}
+
+.services .container {
   display: flex;
-  width: 1440px;
   margin: 0 auto 142px;
-  padding: 0 140px;
 }
 
 
@@ -809,7 +806,7 @@ body {
   z-index: -2;
   top: 102px;
   left: 0;
-  width: 1440px;
+  width: 100%;
   min-height: 290px;
   background-color: #f0f0f0;
 }
@@ -1100,10 +1097,15 @@ body {
 /* Секция рассылки */
 
 .newsletter {
+  background-color: #f0f0f0;
+}
+
+.newsletter .container {
+
   display: flex;
   flex-wrap: wrap;
   background-color: #f0f0f0;
-  padding: 64px 133px 56px 147px;
+  padding: 64px 0 56px;
 }
 
 .newsletter-title {
@@ -1113,13 +1115,13 @@ body {
   font-size: 50px;
   line-height: 50px;
   font-weight: 800;
-  margin: 0 252px 144px 0;
+  margin: 0 251px 144px 8px;
 }
 
 .newsletter-subtitle {
-  max-width: 560px;
-  margin: 9px 0 0;
-  vertical-align: middle;
+  max-width: 550px;
+  margin: 0;
+  transform: translateY(9px);
 }
 
 .newsletter-form {
@@ -1129,12 +1131,12 @@ body {
 }
 
 .newsletter-form-input {
-  width: 551px;
+  width: 557px;
   background-color: inherit;
   border: none;
   border-bottom: 3px solid #c4c4c4;
   font-family: inherit;
-  padding: 16px 0 11px 12px;
+  padding: 16px 0 11px 17px;
 }
 
 .newsletter-form-input::placeholder {
@@ -1153,14 +1155,14 @@ body {
   font-weight: 800;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  padding: 15px 35px 15px;
+  padding: 15px 34px 15px;
   cursor: pointer;
   border: 3px solid #c4c4c4;
 }
 
 .newsletter-text-info {
   max-width: 160px;
-  margin: 0 9px 0 auto;
+  margin: 0 0 0 auto;
   padding-left: 32px;
   display: flex;
   flex-wrap: wrap;
@@ -1175,8 +1177,8 @@ body {
 }
 
 .title-wrapper {
-  max-width: 1080px;
-  margin: 0 auto 35px 200px;
+  max-width: 1043px;
+  margin: 0 auto 35px;
 }
 
 .catalog-title {
