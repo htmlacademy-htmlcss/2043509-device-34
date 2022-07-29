@@ -81,6 +81,7 @@ body {
   color: #000000;
   text-decoration: none;
   padding: 10px 0;
+  cursor: pointer;
 }
 
 .page-button::before {
@@ -394,6 +395,11 @@ body {
   transition: 0.5s;
 }
 
+.catalog-header {
+  margin-bottom: 35px;
+  padding: 44px 60px 21px
+}
+
 /* Стили Футера */
 
 .page-footer {
@@ -514,12 +520,16 @@ body {
   background-color: #ffc700;
 }
 
+.footer-social-link:focus.footer-social-link::before {
+  box-shadow: 0 0 0 2px #444444, 0 0 0 4px #af4fff;
+}
+
 .footer-social-link:active .footer-social-icon {
   opacity: 0.3;
 }
 
-.footer-social-link:focus.footer-social-link::before {
-  box-shadow: 0 0 0 2px #444444, 0 0 0 4px #af4fff;
+.footer-social-link:active.footer-social-link::before {
+  box-shadow: none;
 }
 
 .footer-social-link:focus {
@@ -1166,7 +1176,7 @@ body {
 
 .title-wrapper {
   max-width: 1080px;
-  margin: 0 auto 35px;
+  margin: 0 auto 35px 200px;
 }
 
 .catalog-title {
