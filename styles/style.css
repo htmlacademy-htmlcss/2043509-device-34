@@ -832,18 +832,18 @@ body {
   padding: 0 120px 0 0;
 }
 
-.services-item-active {
+.services-item.is-active {
   background-color: #000000;
-}
-
-.services-item-active .page-button {
-  color: #ffe17f;
 }
 
 .services-item:last-child {
   margin-bottom: 0;
 }
 
+.services-button.is-active {
+  color: #ffe17f;
+  background-color: #000000;
+}
 
 .services-description {
   padding: 72.5px 63px 72.5px 0;
@@ -878,7 +878,7 @@ body {
   background-position: 558px;
 }
 
-.services-description-item-active {
+.services-description-item.is-active {
   display: block;
 }
 
@@ -1229,6 +1229,8 @@ body {
 }
 
 .filters {
+  display: flex;
+  flex-direction: column;
   padding: 25px 60px 0;
 }
 

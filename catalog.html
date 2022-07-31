@@ -83,7 +83,33 @@
         <div class="catalog-content-wrapper container">
           <section class="filters">
             <h2 class="filters-title">Фильтр:</h2>
-            <form class="filters-form" action="https://echo.htmlacademy.ru/" method="post"></form>
+            <form class="filters-form" action="https://echo.htmlacademy.ru/" method="post">
+              <fieldset class="products-filter-group">
+                <legend class="hotels-filter-title">Стоимость, &#8381;:
+                </legend>
+                <div class="price-range-scale">
+                  <div class="price-range-bar" style="left: 0; width: 101px">
+                    <button class="button-range button-range-min" type="button">
+                      <span class="visually-hidden">Изменить минимальную цену.</span>
+                    </button>
+                    <button class="button-range button-range-max" type="button">
+                      <span class="visually-hidden">Изменить максимальную цену.</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="price-selection-wrapper">
+                  <label class="price-selection">
+                    <input class="price-input price-input-min" name="price-from" type="text" value="" placeholder="0">
+                    <span class="price-label">от</span>
+                  </label>
+                  <label class="price-selection">
+                    <input class="price-input price-input-max" name="price-to" type="text" value="" placeholder="5000">
+                    <span class="price-label">до</span>
+                  </label>
+
+                </div>
+              </fieldset>
+            </form>
           </section>
           <section class="products">
             <div class="sorting-header-wrapper">
@@ -169,7 +195,7 @@
     </main>
     <footer class="page-footer">
       <div class="container">
-        <a class="logo-link-footer" href="#">
+        <a class="logo-link-footer" href="index.html">
           <img src="images/logo-footer.svg" alt="Логотип сайта Device." width="145" height="36"></a>
         <address class="contacts-address">
           <p class="contacts-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
