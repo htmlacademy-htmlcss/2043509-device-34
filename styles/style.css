@@ -92,7 +92,32 @@ body {
   background-color: #ffe17f;
   top: 50%;
   transform: translateY(-50%);
+  transition: 0.5s;
   z-index: -1;
+}
+
+.focus-element:focus,
+.focus-element:focus-within {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+.page-button:hover.page-button::before {
+  height: 100%;
+  transition: 0.5s;
+}
+
+.page-button:focus {
+  box-shadow: 0 0 0 2px #af4fff;
+  outline: none;
+}
+
+.page-button:active.page-button::before {
+  background-color: #ffcc33;
+}
+
+.page-button:active {
+  box-shadow: none;
 }
 
 /* Стили Хедера */
@@ -106,6 +131,17 @@ body {
 .main-logo-link {
   position: absolute;
   top: -20px;
+}
+
+.main-logo-link:hover,
+.logo-link-footer:hover {
+  opacity: 0.6;
+}
+
+.main-logo-link:active,
+.logo-link-footer:active {
+  opacity: 0.3;
+  outline: none;
 }
 
 .navigation-user-wrapper {
@@ -362,6 +398,11 @@ body {
   opacity: 0.3;
 }
 
+.catalog-menu-button:hover span,
+.catalog-menu-button:active span {
+  opacity: 1;
+}
+
 .catalog-menu-button span::before,
 .catalog-menu-button span::after {
   content: "";
@@ -409,6 +450,20 @@ body {
   display: block;
   width: 100%;
   margin-bottom: 25px;
+}
+
+.logo-link-footer:focus {
+  outline: none;
+}
+
+.logo-link-footer:focus img {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+.logo-link-footer:active img {
+  opacity: 0.3;
+  outline: none;
 }
 
 .contacts-address {
@@ -1291,7 +1346,8 @@ body {
 }
 
 .price-input {
-  max-width: 80px;
+  min-width: 30px;
+  max-width: 71px;
   border: none;
   background-color: transparent;
   color: #000000;
@@ -1304,7 +1360,7 @@ body {
 }
 
 .price-input::placeholder {
-  width: inherit;
+  min-width: 30px;
   font-family: inherit;
   font-size: 15px;
   line-height: 18px;
@@ -1379,9 +1435,11 @@ body {
   line-height: 19px;
   color: #000000;
   display: flex;
+  cursor: pointer;
 }
 
 .control-input {
+  cursor: pointer;
   appearance: none;
   margin: 0;
   padding-left: 36px;
@@ -1554,6 +1612,21 @@ body {
   padding: 16px 0 14px;
   margin-bottom: 44px;
   cursor: pointer;
+}
+
+.more-cards-button:hover {
+  border-color: #000000;
+}
+
+.more-cards-button:focus {
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #af4fff;
+  outline: none;
+  border-color: #e5e5e5;
+}
+
+.more-cards-button:active {
+  opacity: 0.3;
+  box-shadow: none;
 }
 
 .pages-cards-pagination {
