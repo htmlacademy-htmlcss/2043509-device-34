@@ -542,9 +542,7 @@ body {
 
 .promo {
   position: relative;
-  margin-bottom: 70px;
-  padding-bottom: 38px;
-
+  margin-bottom: 35px;
 }
 
 .slider-list {
@@ -561,7 +559,7 @@ body {
   background-image: linear-gradient(180deg, #ffe17f 114px, #ffffff 114px);
 }
 
-.slider-item-active {
+.slider-item.is-active {
   display: grid;
 }
 
@@ -608,7 +606,7 @@ body {
 .pagination {
   position: absolute;
   right: 0;
-  top: 339px;
+  top: 60.5%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -625,14 +623,13 @@ body {
   z-index: 6;
 }
 
-.pagination-button-current {
+.pagination-button.is-active {
   background-color: #000000;
   pointer-events: none;
 }
 
 .promo-slider-image {
-  position: absolute;
-  top: -36px;
+  transform: translateY(-36px);
   display: block;
 }
 

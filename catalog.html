@@ -85,8 +85,7 @@
             <h2 class="filters-title">Фильтр:</h2>
             <form class="filters-form" action="https://echo.htmlacademy.ru/" method="post">
               <fieldset class="products-filter-group">
-                <legend class="hotels-filter-title">Стоимость, &#8381;:
-                </legend>
+                <legend class="hotels-filter-title">Стоимость, &#8381;</legend>
                 <div class="price-range-scale">
                   <div class="price-range-bar" style="left: 0; width: 101px">
                     <button class="button-range button-range-min" type="button">
@@ -106,9 +105,68 @@
                     <input class="price-input price-input-max" name="price-to" type="text" value="" placeholder="5000">
                     <span class="price-label">до</span>
                   </label>
-
                 </div>
               </fieldset>
+              <fieldset class="products-filter-group">
+                <legend class="hotels-filter-title">Цвет</legend>
+                <ul class="filters-list">
+                  <li class="filters-list-item">
+                    <label class="control">
+                      <input class="control-input" type="checkbox" name="color" value="black" checked>
+                      <span class="control-mark control-mark-checkbox"></span>
+                      Черный
+                    </label>
+                  </li>
+                  <li class="filters-list-item">
+                    <label class="control">
+                      <input class="control-input" type="checkbox" name="color" value="white" checked>
+                      <span class="control-mark control-mark-checkbox"></span>
+                      Белый
+                    </label>
+                  </li>
+                  <li class="filters-list-item">
+                    <label class="control">
+                      <input class="control-input" type="checkbox" name="color" value="blue">
+                      <span class="control-mark control-mark-checkbox"></span>
+                      Синий
+                    </label>
+                  </li>
+                  <li class="filters-list-item">
+                    <label class="control">
+                      <input class="control-input" type="checkbox" name="color" value="red">
+                      <span class="control-mark control-mark-checkbox"></span>
+                      Красный
+                    </label>
+                  </li>
+                  <li class="filters-list-item">
+                    <label class="control">
+                      <input class="control-input" type="checkbox" name="color" value="pink">
+                      <span class="control-mark control-mark-checkbox"></span>
+                      Розовый
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="products-filter-group">
+                <legend class="hotels-filter-title">Bluetooth</legend>
+                <ul class="filters-list">
+                  <li class="filters-list-item">
+                    <label class="control">
+                      <input class="control-input" type="radio" name="bluetooth" value="yes" checked>
+                      <span class="control-mark control-mark-radio"></span>
+                      Есть
+                    </label>
+                  </li>
+                  <li class="filters-list-item">
+                    <label class="control">
+                      <input class="control-input" type="radio" name="bluetooth" value="no">
+                      <span class="control-mark control-mark-radio"></span>
+                      Нет
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+              <button class="filters-button page-button" type="submit">Показать</button>
             </form>
           </section>
           <section class="products">
