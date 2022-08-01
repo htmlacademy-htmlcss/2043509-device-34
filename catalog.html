@@ -10,25 +10,27 @@
   </head>
 
   <body>
-    <header class="page-header catalog-header container">
-      <a class="main-logo-link" href="./index.html">
-        <img src="images/main-logo.svg" alt="Логотип сайта Device." width="145" height="36"></a>
-      <div class="navigation-user-wrapper">
-        <form class="site-searching" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="site-searching-input" type="search" placeholder="Поиск по сайту" name="site-searching"
-            aria-label="Поиск по сайту.">
-          <button class="site-searching-button" type="submit">Найти</button>
-        </form>
-        <div class="header-links-wrapper">
-          <a class="navigation-user-link sign-in-link" href="#">Войти</a>
-          <a class="navigation-user-link compare-link" href="#">Сравнить</a>
-          <button class="navigation-user-link cart-button" type="button">Корзина</button>
+    <div class="container">
+      <header class="page-header catalog-header">
+        <a class="main-logo-link" href="./index.html">
+          <img src="images/main-logo.svg" alt="Логотип сайта Device." width="145" height="36"></a>
+        <div class="navigation-user-wrapper">
+          <form class="site-searching" action="https://echo.htmlacademy.ru/" method="post">
+            <input class="site-searching-input" type="search" placeholder="Поиск по сайту" name="site-searching"
+              aria-label="Поиск по сайту.">
+            <button class="site-searching-button" type="submit">Найти</button>
+          </form>
+          <div class="header-links-wrapper">
+            <a class="navigation-user-link sign-in-link" href="#">Войти</a>
+            <a class="navigation-user-link compare-link" href="#">Сравнить</a>
+            <button class="navigation-user-link cart-button" type="button">Корзина</button>
+          </div>
         </div>
-      </div>
-      <nav class="site-navigation">
-        <div class="catalog-menu">
-          <button class="catalog-menu-button" type="button">Каталог товаров</button>
-          <div class="catalog-menu-popup">
+        <nav class="site-navigation">
+          <div class="catalog-menu">
+            <button class="catalog-menu-button" type="button">Каталог товаров
+              <span></span>
+            </button>
             <ul class="catalog-menu-list">
               <li class="catalog-menu-item">
                 <a class="catalog-menu-link" href="#">Виртуальная реальность</a>
@@ -50,20 +52,20 @@
               </li>
             </ul>
           </div>
-        </div>
-        <ul class="site-navigation-list">
-          <li class="site-navigation-item">
-            <a class="site-navigation-link" href="#">Доставка</a>
-          </li>
-          <li class="site-navigation-item">
-            <a class="site-navigation-link" href="#">Гарантия</a>
-          </li>
-          <li class="site-navigation-item">
-            <a class="site-navigation-link" href="#">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+          <ul class="site-navigation-list">
+            <li class="site-navigation-item">
+              <a class="site-navigation-link" href="#">Доставка</a>
+            </li>
+            <li class="site-navigation-item">
+              <a class="site-navigation-link" href="#">Гарантия</a>
+            </li>
+            <li class="site-navigation-item">
+              <a class="site-navigation-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
     <main class="main-index">
       <div class="title-wrapper container">
         <h1 class="catalog-title">Моноподы для селфи</h1>
@@ -169,8 +171,8 @@
               <button class="filters-button page-button" type="submit">Показать</button>
             </form>
           </section>
-          <section class="products">
-            <div class="sorting-header-wrapper">
+          <div class="products">
+            <section class="sorting-wrapper">
               <h2 class="sorting-title">Сортировка:</h2>
               <select class="sorting-type" name="sorting-type">
                 <option value="popular" selected>Популярные</option>
@@ -184,8 +186,9 @@
                   <span class="visually-hidden">Сортировать по уменьшению.</span>
                 </button>
               </div>
-            </div>
-            <div class="catalog-main-content">
+            </section>
+            <section class="catalog-main-content">
+              <h2 class="visually-hidden">Карточки товаров.</h2>
               <ul class="product-cards">
                 <li class="product-card">
                   <a class="product-card-link" href="#">
@@ -246,8 +249,8 @@
                   </li>
                 </ul>
               </div>
-            </div>
-          </section>
+            </section>
+          </div>
         </div>
       </div>
     </main>
