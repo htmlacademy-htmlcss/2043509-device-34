@@ -87,9 +87,9 @@
             <h2 class="filters-title">Фильтр:</h2>
             <form class="filters-form" action="https://echo.htmlacademy.ru/" method="post">
               <fieldset class="products-filter-group">
-                <legend class="hotels-filter-title">Стоимость, &#8381;</legend>
+                <legend class="products-filter-title">Стоимость</legend>
                 <div class="price-range-scale">
-                  <div class="price-range-bar" style="left: 0; width: 101px">
+                  <div class="price-range-bar" style="left: 0; width: 120px">
                     <button class="button-range button-range-min" type="button">
                       <span class="visually-hidden">Изменить минимальную цену.</span>
                     </button>
@@ -100,17 +100,19 @@
                 </div>
                 <div class="price-selection-wrapper">
                   <label class="price-selection">
-                    <input class="price-input price-input-min" name="price-from" type="text" value="" placeholder="0">
-                    <span class="price-label">от</span>
+                    <input class="price-input price-input-min" name="price-from" type="text" value=""
+                      placeholder="от 0">
+                    <!-- <span class="price-label">от</span> -->
                   </label>
                   <label class="price-selection">
-                    <input class="price-input price-input-max" name="price-to" type="text" value="" placeholder="5000">
-                    <span class="price-label">до</span>
+                    <input class="price-input price-input-max" name="price-to" type="text" value=""
+                      placeholder="до 5000">
+                    <!-- <span class="price-label">до</span> -->
                   </label>
                 </div>
               </fieldset>
               <fieldset class="products-filter-group">
-                <legend class="hotels-filter-title">Цвет</legend>
+                <legend class="products-filter-title">Цвет</legend>
                 <ul class="filters-list">
                   <li class="filters-list-item">
                     <label class="control">
@@ -150,7 +152,7 @@
                 </ul>
               </fieldset>
               <fieldset class="products-filter-group">
-                <legend class="hotels-filter-title">Bluetooth</legend>
+                <legend class="products-filter-title">Bluetooth</legend>
                 <ul class="filters-list">
                   <li class="filters-list-item">
                     <label class="control">
@@ -182,7 +184,7 @@
                 <button class="increase-sorting">
                   <span class="visually-hidden">Сортировать по увеличению.</span>
                 </button>
-                <button class="increase-sorting">
+                <button class="decrease-sorting">
                   <span class="visually-hidden">Сортировать по уменьшению.</span>
                 </button>
               </div>
