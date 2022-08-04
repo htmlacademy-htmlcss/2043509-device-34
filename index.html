@@ -44,7 +44,7 @@
                 <a class="catalog-menu-link" href="#">Квадрокоптеры</a>
               </li>
               <li class="catalog-menu-item">
-                <a class="catalog-menu-link" href="./catalog.html">Моноподы для селфи</a>
+                <a class="catalog-menu-link" href="catalog.html">Моноподы для селфи</a>
               </li>
               <li class="catalog-menu-item">
                 <a class="catalog-menu-link" href="#">Умные часы</a>
@@ -81,13 +81,13 @@
           </button>
         </div>
         <div class="pagination">
-          <button class="pagination-button is-active" type="button">
+          <button class="pagination-button is-active focus-element" type="button">
             <span class="visually-hidden">1 товар.</span>
           </button>
-          <button class="pagination-button" type="button">
+          <button class="pagination-button focus-element" type="button">
             <span class="visually-hidden">2 товар</span>
           </button>
-          <button class="pagination-button" type="button">
+          <button class="pagination-button focus-element" type="button">
             <span class="visually-hidden">3 товар</span>
           </button>
         </div>
@@ -154,33 +154,33 @@
         <h2 class="visually-hidden">Выбор категории устройств.</h2>
         <ul class="category-list">
           <li class="category-item">
-            <a class="category-link category-link-virtual-reality" href="#">
+            <a class="category-link category-link-virtual-reality focus-element" href="#">
               Виртуальная
               реальность
             </a>
           </li>
           <li class="category-item">
-            <a class="category-link category-link-monopods" href="#">
+            <a class="category-link category-link-monopods focus-element" href="catalog.html">
               Моноподы для&nbsp;селфи
             </a>
           </li>
           <li class="category-item">
-            <a class="category-link category-link-action-cameras" href="#">
+            <a class="category-link category-link-action-cameras focus-element" href="#">
               Экшн-камеры
             </a>
           </li>
           <li class="category-item">
-            <a class="category-link category-link-fitness-trackers" href="#">
+            <a class="category-link category-link-fitness-trackers focus-element" href="#">
               Фитнес-браслеты
             </a>
           </li>
           <li class="category-item">
-            <a class="category-link category-link-smart-watches" href="#">
+            <a class="category-link category-link-smart-watches focus-element" href="#">
               Умные часы
             </a>
           </li>
           <li class="category-item">
-            <a class="category-link category-link-quadrocopters" href="#">
+            <a class="category-link category-link-quadrocopters focus-element" href="#">
               Квадрокоптеры
             </a>
           </li>
@@ -259,7 +259,8 @@
           <address class="address">
             Санкт-Петербург, набережная реки Карповки, 5, литера П.
           </address>
-          <a class="contacts-phone" href="tel:+78128121212" aria-label="Контактный телефон.">+7 (812) 812-12-12</a>
+          <a class="contacts-phone focus-element" href="tel:+78128121212" aria-label="Контактный телефон.">+7 (812)
+            812-12-12</a>
           <h3 class="contacts-subtitle">Время работы</h3>
           <ul class="contacts-schedule">
             <li class="contacts-schedule-item">пн—пт: с 10:00 до 22:00</li>
@@ -270,13 +271,16 @@
       </div>
       <section class="newsletter">
         <div class="container">
-          <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
-          <p class="newsletter-subtitle">Еженедельный дайджест с обзорами новинок,<br>
-            длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
+          <div class="newsletter-header">
+            <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
+            <p class="newsletter-subtitle">Еженедельный дайджест с обзорами новинок,<br>
+              длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
+          </div>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+            <!-- При неправильном вводе email к input с классом newsletter-form-input добавить класс is-invalid -->
             <input class="newsletter-form-input" placeholder="Ваш e-mail" type="email" name="newsletter-email"
               aria-label="Введите ваш Email." required>
-            <button class="newsletter-button" type="submit">
+            <button class="newsletter-button focus-element" type="submit">
               Подписаться
             </button>
           </form>

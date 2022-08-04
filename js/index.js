@@ -17,8 +17,6 @@ const sliderItems = document.querySelectorAll('.slider-item');
 const sliderButtonNext = document.querySelector('.slider-button-next');
 const sliderButtonPrev = document.querySelector('.slider-button-prev');
 
-let index = 0;
-
 paginationButtons.forEach((button, index) => {
   button.addEventListener('click', (evt) => {
     evt.preventDefault();
@@ -28,6 +26,8 @@ paginationButtons.forEach((button, index) => {
     sliderItems[index].classList.add('is-active');
   });
 })
+
+let index = 0;
 
 sliderButtonNext.addEventListener('click', (evt) => {
   evt.preventDefault();
@@ -46,11 +46,12 @@ sliderButtonPrev.addEventListener('click', (evt) => {
   evt.preventDefault();
   paginationButtons[index].classList.remove('is-active');
   sliderItems[index].classList.remove('is-active');
-  if (!index) {
-    index = paginationButtons.length - 1;
-  } else {
+  if (index != 0) {
     index = index - 1;
+  } else {
+    index = paginationButtons.length - 1;
   }
   paginationButtons[index].classList.add('is-active');
   sliderItems[index].classList.add('is-active');
+  index === paginationButtons[index];
 });

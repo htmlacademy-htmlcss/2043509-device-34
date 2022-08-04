@@ -446,7 +446,6 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  display: block;
   width: 50px;
   height: 50px;
   background-color: inherit;
@@ -464,16 +463,20 @@ body {
 .catalog-menu-button span::after {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  transform-origin: center;
   width: 16px;
   height: 2px;
   background-color: #000000;
 }
 
 .catalog-menu-button span::after {
-  transform: translate(-50%, -50%) rotate(90deg) scale(1);
+  transform: rotate(-90deg);
+  transition: transform 0.3s;
 }
 
 .catalog-menu:focus-within .catalog-menu-list {
@@ -481,7 +484,8 @@ body {
 }
 
 .catalog-menu:focus-within .catalog-menu-button span::after {
-  transform: scale(0);
+  transform: rotate(180deg);
+  transition: transform 0.3s;
 }
 
 .catalog-header {
@@ -713,28 +717,60 @@ body {
   box-shadow: none;
 }
 
+.slider-button:disabled {
+  opacity: 0.1;
+}
+
 .pagination {
   position: absolute;
-  right: 20px;
-  top: 60.5%;
+  right: 17px;
+  top: 60%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 17px;
 }
 
 .pagination-button {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background-color: inherit;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  z-index: 6;
+}
+
+.pagination-button::before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
   width: 12px;
   height: 12px;
   border: 2px solid #000000;
   border-radius: 50%;
   background-color: inherit;
-  padding: 0;
-  cursor: pointer;
-  z-index: 6;
+}
+
+.pagination-button:hover {
+  opacity: 0.6;
+}
+
+.pagination-button:active {
+  opacity: 0.3;
+}
+
+.pagination-button:disabled {
+  opacity: 0.1;
+}
+
+.pagination-button.is-active::before {
+  background-color: #000000;
 }
 
 .pagination-button.is-active {
-  background-color: #000000;
   pointer-events: none;
 }
 
@@ -768,6 +804,7 @@ body {
   z-index: 1;
   color: #000000;
   margin-bottom: 49px;
+  padding-top: 12px;
 }
 
 .product-number {
@@ -851,6 +888,14 @@ body {
   top: 0;
   left: 0;
   background-color: #ffe17f;
+}
+
+.category-link:hover::before {
+  background-color: #ffc700;
+}
+
+.category-link:active {
+  opacity: 0.3;
 }
 
 .category-link-virtual-reality::before {
@@ -1201,9 +1246,18 @@ body {
 }
 
 .contacts-phone {
+  width: 154px;
   color: #444444;
   display: block;
   margin-bottom: 30px;
+}
+
+.contacts-phone:hover {
+  opacity: 0.6;
+}
+
+.contacts-phone:active {
+  opacity: 0.3;
 }
 
 .contacts-schedule {
@@ -1230,14 +1284,22 @@ body {
   padding: 64px 20px 56px;
 }
 
+.newsletter-header {
+  display: grid;
+  grid-template-columns: 560px 1fr;
+  column-gap: 46px;
+  margin-bottom: 142px;
+}
+
 .newsletter-title {
-  max-width: 348px;
+  padding-right: 150px;
   color: #000000;
   font-family: "Raleway", "Arial", sans-serif;
   font-size: 50px;
   line-height: 50px;
   font-weight: 800;
-  margin: 0 251px 144px 8px;
+  padding-left: 8px;
+  margin: 0;
 }
 
 .newsletter-subtitle {
@@ -1259,6 +1321,9 @@ body {
   border-bottom: 3px solid #c4c4c4;
   font-family: inherit;
   padding: 16px 0 11px 17px;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
 }
 
 .newsletter-form-input::placeholder {
@@ -1269,6 +1334,19 @@ body {
   opacity: 0.5;
 }
 
+.newsletter-form-input:focus {
+  background-color: #dcdcdc;
+  outline: none;
+}
+
+.newsletter-form-input:disabled {
+  opacity: 0.5;
+}
+
+.newsletter-form-input.is-invalid {
+  border-bottom: 3px solid #ff3d3d;
+}
+
 .newsletter-button {
   color: #000000;
   font-family: "Raleway", "Arial", sans-serif;
@@ -1277,18 +1355,44 @@ body {
   font-weight: 800;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  padding: 15px 34px 15px;
+  padding: 15px 33px 15px 35px;
   cursor: pointer;
   border: 3px solid #c4c4c4;
 }
 
+.newsletter-button:hover {
+  background-color: #000000;
+  color: #ffffff;
+  border: 3px solid #000000;
+}
+
+.newsletter-button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.newsletter-button:disabled {
+  opacity: 0.3;
+}
+
 .newsletter-text-info {
+  position: relative;
   max-width: 160px;
   margin: 0 0 0 auto;
   padding-left: 32px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+}
+
+.newsletter-text-info::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 14px;
+  height: 14px;
+  background-image: url("../images/icons/check-mark-free.svg");
+  background-repeat: no-repeat;
+  ;
 }
 
 /* Стили страницы каталога */
