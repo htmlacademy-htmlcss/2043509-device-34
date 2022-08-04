@@ -16,8 +16,10 @@
           <img src="images/main-logo.svg" alt="Логотип сайта Device." width="145" height="36"></a>
         <div class="navigation-user-wrapper">
           <form class="site-searching" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="site-searching-input" type="search" placeholder="Поиск по сайту" name="site-searching"
-              aria-label="Поиск по сайту.">
+            <div class="site-searching-wrapper">
+              <input class="site-searching-input" type="search" placeholder="Поиск по сайту" name="site-searching"
+                aria-label="Поиск по сайту.">
+            </div>
             <button class="site-searching-button" type="submit">Найти</button>
           </form>
           <div class="header-links-wrapper">
@@ -31,6 +33,7 @@
             <button class="catalog-menu-button  focus-element" type="button">Каталог товаров
               <span></span>
             </button>
+            <!-- Для выделения активной ссылки списка добавить к нужной ссылке класс is-active -->
             <ul class="catalog-menu-list">
               <li class="catalog-menu-item">
                 <a class="catalog-menu-link" href="#">Виртуальная реальность</a>
@@ -42,7 +45,7 @@
                 <a class="catalog-menu-link" href="#">Квадрокоптеры</a>
               </li>
               <li class="catalog-menu-item">
-                <a class="catalog-menu-link" href="#">Моноподы для селфи</a>
+                <a class="catalog-menu-link is-active" href="#">Моноподы для селфи</a>
               </li>
               <li class="catalog-menu-item">
                 <a class="catalog-menu-link" href="#">Умные часы</a>
@@ -52,6 +55,7 @@
               </li>
             </ul>
           </div>
+          <!-- Для выделения активной ссылки списка добавить к нужной ссылке класс is-active -->
           <ul class="site-navigation-list">
             <li class="site-navigation-item">
               <a class="site-navigation-link" href="#">Доставка</a>
