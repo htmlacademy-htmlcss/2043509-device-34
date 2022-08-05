@@ -107,13 +107,14 @@ body {
   transition: 0.3s;
 }
 
+.page-button:active.page-button::before {
+  height: 100%;
+  background-color: #ffcc33;
+}
+
 .page-button:focus {
   box-shadow: 0 0 0 2px #af4fff;
   outline: none;
-}
-
-.page-button:active.page-button::before {
-  background-color: #ffcc33;
 }
 
 .page-button:active {
