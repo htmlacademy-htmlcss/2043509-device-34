@@ -104,7 +104,7 @@ body {
 
 .page-button:hover.page-button::before {
   height: 100%;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .page-button:focus {
@@ -489,7 +489,7 @@ body {
 }
 
 .catalog-header {
-  margin-bottom: 35px;
+  margin-bottom: 36px;
   padding: 44px 60px 21px
 }
 
@@ -599,6 +599,8 @@ body {
 .site-navigation-link-footer:focus {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .contacts-phone-footer {
@@ -944,37 +946,37 @@ body {
 }
 
 .category-link-virtual-reality::before {
-  background-image: url(../images/content-images/virtual-reality.svg);
+  background-image: url("../images/content-images/virtual-reality.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .category-link-monopods::before {
-  background-image: url(../images/content-images/monopod.svg);
+  background-image: url("../images/content-images/monopod.svg");
   background-repeat: no-repeat;
   background-position: bottom;
 }
 
 .category-link-action-cameras::before {
-  background-image: url(../images/content-images/action-camera.svg);
+  background-image: url("../images/content-images/action-camera.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .category-link-fitness-trackers::before {
-  background-image: url(../images/content-images/fitnes-tracker.svg);
+  background-image: url("../images/content-images/fitnes-tracker.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .category-link-smart-watches::before {
-  background-image: url(../images/content-images/smart-watch.svg);
+  background-image: url("../images/content-images/smart-watch.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .category-link-quadrocopters::before {
-  background-image: url(../images/content-images/copter.svg);
+  background-image: url("../images/content-images/copter.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1506,6 +1508,14 @@ body {
   color: #000000;
 }
 
+.breadcrumbs-link:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs-link:active {
+  opacity: 0.3;
+}
+
 .breadcrumbs-item:last-child .breadcrumbs-link {
   pointer-events: none;
 }
@@ -1538,34 +1548,72 @@ body {
 }
 
 .button-range {
-  position: absolute;
   width: 18px;
   height: 18px;
   border-radius: 50%;
   border: 2px solid #000000;
   cursor: pointer;
+  background-color: #ebebeb;
+}
+
+.button-range:hover {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.button-range:active {
+  border-color: rgba(0, 0, 0, 0.5);
+  background-color: #000000;
+}
+
+.button-range:focus.button-range-min::before,
+.button-range:focus.button-range-max::before {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .button-range-min {
+  position: absolute;
   left: 0;
-  transform: translate(-60%, -50%);
+  transform: translate(-55%, -50%);
+}
+
+.button-range-min::before {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  content: "";
+  transform: translate(-50%, -50%);
 }
 
 .button-range-max {
+  position: absolute;
   right: 0;
-  transform: translate(31%, -50%);
+  transform: translate(40%, -50%);
+}
+
+.button-range-max::before {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  content: "";
+  transform: translate(-50%, -50%);
 }
 
 .price-selection-wrapper {
   position: relative;
-  left: -20px;
+  left: -14px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  column-gap: 8px;
 }
 
 .price-selection {
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
   display: flex;
-  position: relative;
+  opacity: 0.3;
 }
 
 .price-input {
@@ -1574,12 +1622,15 @@ body {
   border: none;
   background-color: transparent;
   color: #000000;
-  opacity: 0.3;
   font-family: inherit;
   font-size: 15px;
   line-height: 18px;
-  padding: 0 5px;
+  padding: 0 0 0 5px;
   margin: 0;
+}
+
+.price-input:focus {
+  outline: none;
 }
 
 .price-input::placeholder {
@@ -1588,16 +1639,6 @@ body {
   font-size: 15px;
   line-height: 18px;
 }
-
-/* .price-label {
-  position: absolute;
-  left: -16px;
-  color: #000000;
-  opacity: 0.3;
-  font-family: inherit;
-  font-size: 15px;
-  line-height: 18px;
-} */
 
 .filters {
   display: flex;
@@ -1668,6 +1709,10 @@ body {
   padding-left: 36px;
 }
 
+.control-input:disabled~span {
+  opacity: 0.1;
+}
+
 .control-mark {
   position: absolute;
   width: 20px;
@@ -1726,7 +1771,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  column-gap: 206px;
+  column-gap: 204px;
 }
 
 .catalog-main-content {
@@ -1782,7 +1827,6 @@ body {
   transform: rotate(180deg) translate(50%, 50%);
 }
 
-
 .product-cards {
   padding: 0;
   margin: 0;
@@ -1794,25 +1838,41 @@ body {
   margin-bottom: 44px;
 }
 
-.product-card {
-  position: relative;
-}
-
 .product-card-link {
   position: relative;
-  z-index: 0;
   display: flex;
   flex-wrap: wrap;
   text-decoration: none;
+  z-index: 0;
 }
 
-.product-card-link:hover {
+.product-card-link::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  opacity: 0;
+}
+
+.product-card-link:hover::before {
   opacity: 0.6;
+  z-index: 1;
+}
+
+.product-card-link:active::before {
+  opacity: 0.3;
+  z-index: 1;
 }
 
 .product-card-link:hover .more-info-product {
   display: flex;
-  opacity: 1;
+}
+
+.product-card-link:active .more-info-product.page-button::before {
+  background-color: #ffcc33;
 }
 
 .product-card-image {
