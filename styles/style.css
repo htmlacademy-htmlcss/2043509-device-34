@@ -547,7 +547,7 @@ body {
   width: 80px;
   height: 7px;
   background-color: #ffc700;
-  bottom: 20px;
+  bottom: 16px;
   left: 0;
 }
 
@@ -586,12 +586,40 @@ body {
   text-transform: uppercase;
 }
 
+.site-navigation-link-footer:hover {
+  color: #ffc700;
+  border-bottom: 2px solid #ffc700;
+  padding-bottom: 4px;
+}
+
+.site-navigation-link-footer:active {
+  opacity: 0.3;
+}
+
+.site-navigation-link-footer:focus {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
 .contacts-phone-footer {
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
   align-self: center;
   padding-top: 5px;
+}
+
+.contacts-phone-footer:hover {
+  color: #ffc700;
+}
+
+.contacts-phone-footer:active {
+  opacity: 0.3;
+}
+
+.contacts-phone-footer:focus {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .footer-social-list {
@@ -614,8 +642,6 @@ body {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.3);
   color: #444444;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .footer-social-link::before {
@@ -623,14 +649,17 @@ body {
   content: "";
   width: 40px;
   height: 40px;
+  color: #444444;
 }
 
 .footer-social-link:hover {
   background-color: #ffc700;
 }
 
+
 .footer-social-link:focus.footer-social-link::before {
-  box-shadow: 0 0 0 2px #444444, 0 0 0 4px #af4fff;
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 .footer-social-link:active .footer-social-icon {
@@ -648,6 +677,22 @@ body {
 .html-academy-link {
   color: #ffc700;
   justify-self: end;
+  display: flex;
+  align-items: center;
+}
+
+.html-academy-link:hover {
+  color: #ffffff;
+}
+
+.html-academy-link:active {
+  color: #ffffff;
+  opacity: 0.3;
+}
+
+.html-academy-link:focus {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
 }
 
 /* Стили главной страницы */
@@ -1320,7 +1365,7 @@ body {
   border: none;
   border-bottom: 3px solid #c4c4c4;
   font-family: inherit;
-  padding: 16px 0 11px 17px;
+  padding: 10px 0 6px 17px;
   font-size: 18px;
   line-height: 30px;
   color: #000000;
@@ -1355,7 +1400,7 @@ body {
   font-weight: 800;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  padding: 15px 33px 15px 35px;
+  padding: 15px 33px 15px 36px;
   cursor: pointer;
   border: 3px solid #c4c4c4;
 }
@@ -1368,6 +1413,8 @@ body {
 
 .newsletter-button:active {
   color: rgba(255, 255, 255, 0.3);
+  border: 3px solid #000000;
+  background-color: #000000;
 }
 
 .newsletter-button:disabled {
