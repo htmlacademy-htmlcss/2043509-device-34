@@ -1710,6 +1710,23 @@ body {
   padding-left: 36px;
 }
 
+.control-input:hover~span {
+  opacity: 0.6;
+}
+
+.control-input:active~span {
+  opacity: 0.3;
+}
+
+.control-input:focus {
+  outline: none;
+}
+
+.control-input:focus+.control-mark::before {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
 .control-input:disabled~span {
   opacity: 0.1;
 }
@@ -1721,6 +1738,15 @@ body {
   left: 0;
   top: 0;
   background-color: inherit;
+}
+
+.control-mark::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  left: -2px;
+  top: -2px;
 }
 
 .control-mark-checkbox {
@@ -1796,6 +1822,18 @@ body {
   cursor: pointer;
 }
 
+.sorting-type:hover {
+  opacity: 0.6;
+}
+
+.sorting-type:active {
+  opacity: 0.3;
+}
+
+.sorting-type:disabled {
+  opacity: 0.1;
+}
+
 .up-down-sorting {
   display: flex;
 }
@@ -1808,6 +1846,16 @@ body {
   background-color: inherit;
   border: none;
   cursor: pointer;
+}
+
+.increase-sorting:hover.increase-sorting::before,
+.decrease-sorting:hover.decrease-sorting::before {
+  opacity: 0.5;
+}
+
+.increase-sorting:active.increase-sorting::before,
+.decrease-sorting:active.decrease-sorting::before {
+  opacity: 1;
 }
 
 .increase-sorting::before,
@@ -1922,7 +1970,7 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   border: 3px solid #e5e5e5;
-  padding: 16px 0 14px;
+  padding: 15px 0;
   margin-bottom: 44px;
   cursor: pointer;
 }
@@ -1931,30 +1979,52 @@ body {
   border-color: #000000;
 }
 
-.more-cards-button:focus {
-  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #af4fff;
-  outline: none;
-  border-color: #e5e5e5;
-}
-
 .more-cards-button:active {
   opacity: 0.3;
-  box-shadow: none;
+  border-color: #000000;
+}
+
+.more-cards-button:disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .pages-cards-pagination {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 0 141px 0 128px;
+  padding: 15.5px 200px;
   width: 100%;
   background-color: #ebebeb;
 }
 
-.page-backward-button,
-.page-forward-button {
+.page-forward-button,
+.page-backward-button {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #000000;
+  padding: 25px;
+  border: none;
+  top: 0;
+  bottom: 0;
+  background-color: #ebebeb;
+  display: flex;
+  align-items: center;
+}
+
+.page-backward-button {
   position: absolute;
   left: 0;
+}
+
+.page-forward-button {
+  position: absolute;
+  right: 0;
+  padding-right: 22px;
 }
 
 .pages-pagination-list {
@@ -1966,4 +2036,32 @@ body {
   padding: 0;
   margin: 0 auto;
   list-style-type: none;
+}
+
+.pagination-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  color: rgba(68, 68, 68, 0.3);
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.pagination-link:hover {
+  color: rgba(68, 68, 68, 1);
+}
+
+.pagination-link:active {
+  color: rgba(68, 68, 68, 0.1);
+}
+
+.pagination-link-decorative-item {
+  pointer-events: none;
+}
+
+.pagination-current {
+  pointer-events: none;
 }
