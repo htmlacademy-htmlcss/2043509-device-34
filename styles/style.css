@@ -708,8 +708,7 @@ body {
 
 .logo-link-footer {
   display: block;
-  width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
 }
 
 .logo-link-footer:focus {
@@ -726,10 +725,16 @@ body {
   outline: none;
 }
 
+.footer-content {
+  display: grid;
+  grid-template-columns: 239px 1fr;
+  column-gap: 119px;
+}
+
 .contacts-address {
   position: relative;
-  max-width: 239px;
-  margin-right: 119px;
+  /* max-width: 239px;
+  margin-right: 119px; */
 }
 
 .footer-wrapper {
