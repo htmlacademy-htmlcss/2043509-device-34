@@ -22,8 +22,11 @@
             </div>
             <button class="site-searching-button" type="submit">Найти</button>
           </form>
-          <div class="header-links-wrapper">
-            <a class="navigation-user-link sign-in-link" href="#">Войти</a>
+          <div class="navigation-links-wrapper">
+            <div class="sign-in-link-wrapper">
+              <a class="navigation-user-link sign-in-link" href="#">Коля Петухов</a>
+              <a class="navigation-user-link sign-out-link" href="#">Выйти</a>
+            </div>
             <a class="navigation-user-link compare-link" href="#">Сравнить</a>
             <button class="navigation-user-link cart-button" type="button">Корзина</button>
           </div>
@@ -155,7 +158,7 @@
               </fieldset>
               <fieldset class="products-filter-group">
                 <legend class="products-filter-title">Bluetooth</legend>
-                <ul class="filters-list">
+                <ul class="filters-list filters-list-bluetooth">
                   <li class="filters-list-item">
                     <label class="control">
                       <input class="control-input" type="radio" name="bluetooth" value="yes" checked>
@@ -235,9 +238,9 @@
               </ul>
               <button class="more-cards-button focus-element" type="button">Загрузить ещё</button>
               <div class="pages-cards-pagination">
-                <!-- Для скрытия кнопки назад или вперёд необходимо добавить класс inactive к button с классом page-backward-button или page-forward-button -->
-                <button class="page-backward-button">Назад</button>
-                <button class="page-forward-button">Вперёд</button>
+                <!-- Для скрытия кнопки назад или вперёд необходимо добавить класс is-inactive к button с классом page-backward-button или page-forward-button -->
+                <button class="page-backward-button focus-element">Назад</button>
+                <button class="page-forward-button focus-element">Вперёд</button>
                 <ul class="pages-pagination-list">
                   <li class="pagination-item">
                     <a class="pagination-link focus-element pagination-current">1</a>
