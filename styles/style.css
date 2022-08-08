@@ -149,12 +149,13 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 26px;
   margin-bottom: 30px;
-  align-items: start;
+  align-items: center;
 }
 
 .site-searching {
   position: relative;
   display: flex;
+  align-self: start;
 }
 
 .site-searching-wrapper:focus-within {
@@ -243,10 +244,8 @@ body {
 }
 
 .navigation-links-wrapper {
-  display: grid;
-  grid-template-columns: 236px 1fr 1fr;
-  gap: 20px;
-  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .navigation-user-link {
@@ -318,20 +317,17 @@ body {
   line-height: 17px;
 }
 
-.sign-in-link-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  align-self: start;
-}
-
 .sign-in-link {
+  max-width: 250px;
   padding-left: 27px;
+  flex-grow: 1;
   margin-right: 28px;
 }
 
 .sign-in-link::before {
   position: absolute;
   left: 0;
+  top: 8px;
   content: "";
   display: block;
   width: 15px;
@@ -342,10 +338,12 @@ body {
 
 .sign-out-link {
   opacity: 0.3;
+  margin-right: 26px;
 }
 
 .compare-link {
   padding-left: 22px;
+  margin-right: 20px;
 }
 
 .compare-link::before {

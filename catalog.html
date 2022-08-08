@@ -23,12 +23,45 @@
             <button class="site-searching-button" type="submit">Найти</button>
           </form>
           <div class="navigation-links-wrapper">
-            <div class="sign-in-link-wrapper">
-              <a class="navigation-user-link sign-in-link" href="#">Коля Петухов</a>
-              <a class="navigation-user-link sign-out-link" href="#">Выйти</a>
-            </div>
+            <a class="navigation-user-link sign-in-link" href="#">Коля Петухов</a>
+            <a class="navigation-user-link sign-out-link" href="#">Выйти</a>
             <a class="navigation-user-link compare-link" href="#">Сравнить</a>
-            <button class="navigation-user-link cart-button" type="button">Корзина</button>
+            <div class="user-cart-wrapper">
+              <button class="navigation-user-link cart-button" type="button">Корзина</button>
+              <div class="cart">
+                <h2 class="visually-hidden">Список товаров.</h2>
+                <ul class="cart-list">
+                  <li class="cart-item">
+                    <a class="cart-link focus-element" href="#">
+                      <img class="cart-image" src="./images/content-images/monopod-1-small.jpg" width="39" height="43"
+                        alt="Селфи-палка с установленным смартфоном.">
+                      <span class="cart-image-title">Любительская селфи-палка</span>
+                    </a>
+                    <button class="delete-button">
+                      <span class="visually-hidden">Удалить товар из корзины.</span>
+                      <span></span>
+                    </button>
+                  </li>
+                  <li class="cart-item">
+                    <a class="cart-link focus-element" href="#">
+                      <img class="cart-image" src="./images/content-images/monopod-2-small.jpg" width="39" height="43"
+                        alt="Селфи-палка в сложенном состоянии.">
+                      <span class="cart-image-title">Профессиональная селфи-палка</span>
+                    </a>
+                    <button class="delete-button">
+                      <span class="visually-hidden">Удалить товар из корзины.</span>
+                      <span></span>
+                    </button>
+                  </li>
+                </ul>
+                <div class="cart-summary">
+                  <span class="total cart-items">Товаров: 2</span>
+                  <span class="total-price">Сумма: 2000 &#8381;</span>
+                </div>
+                <!-- для деактивации ссылки добавит класс disabled -->
+                <a class="open-cart-button focus-element" href="#">Открыть корзину</a>
+              </div>
+            </div>
           </div>
         </div>
         <nav class="site-navigation">
