@@ -261,9 +261,9 @@
       </section>
       <section class="delivery container">
         <h2 class="visually-hidden">Доставка под заказ.</h2>
-        <a class="delivery-link" href="#">Доставим редкий товар под заказ
+        <button class="delivery-link">Доставим редкий товар под заказ
           <span class="delivery-info"></span>
-        </a>
+        </button>
       </section>
       <div class="columns-wrapper container">
         <section class="about">
@@ -385,6 +385,65 @@
         </div>
       </div>
     </footer>
+    <!-- Для показа модального окна необходимо добавить к <div> с классом modal-container класс is-open -->
+    <div class="modal-container">
+      <div class="modal-delivery-wrapper">
+        <button class="modal-close-button focus-element"></button>
+        <h2 class="modal-heading">Доставка под заказ</h2>
+        <form class="order-form" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="inputs-wrapper">
+            <div class="input-wrapper">
+              <label class="order-form-label">Ваше имя:</label>
+              <input class="order-form-input user-name-input" type="text" name="user-name" required="" value=""
+                placeholder="Введите имя">
+            </div>
+            <!-- При неправильном заполнении поля ввода e-mail к <div> c классом input-wrapper-email добавить класс is-invalid для показа сообщения -->
+            <div class="input-wrapper input-wrapper-email">
+              <label class="order-form-label">Ваш e-mail:</label>
+              <input class="order-form-input email-input" type="email" name="user-email" required="" value=""
+                placeholder="почта">
+              <span class="error-text">Забавный у вас адрес</span>
+            </div>
+          </div>
+          <div class="inputs-wrapper">
+            <div class="input-wrapper">
+              <label class="order-form-label">Что нужно привезти:</label>
+              <input class="order-form-input product-input" type="text" name="product" required="" value=""
+                placeholder="В свободной форме">
+            </div>
+          </div>
+          <div class="input-wrapper input-wrapper-amount">
+            <div class="amount-label">
+              <label class="form-hotels-search-label" for="product-amount">Количество:
+              </label>
+              <span class="tooltip">
+                <button class="tooltip-button" type="button" aria-labelledby="tooltip-label">
+                  <svg class="tooltip-icon" width="1" height="9" viewBox="0 0 1 9" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Иконка дополнительной информации.">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0h2v2H0V0Zm2 12H0V3h2v9Z" fill="currentColor">
+                    </path>
+                  </svg>
+                </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label">Постараемся найти, сколько нужно. Привезём
+                  сколько получится по требованиям
+                  к провозу багажа.</span>
+              </span>
+            </div>
+            <div class="input-buttons-wrapper">
+              <input class="order-form-input product-amount-input" type="text" name="product-amount" id="product-amount"
+                value="1">
+              <button class="less-more-button number-down-button" type="button">
+                <span class="visually-hidden">Уменьшить количество товара.</span>
+              </button>
+              <button class="less-more-button number-up-button" type="button">
+                <span class="visually-hidden">Увеличить количество товара.</span>
+              </button>
+            </div>
+          </div>
+          <button class="order-form-submit-button page-button" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
     <script src="./js/index.js"></script>
   </body>
 

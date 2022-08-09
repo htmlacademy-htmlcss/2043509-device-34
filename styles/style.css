@@ -1322,6 +1322,8 @@ body {
   position: relative;
   width: 1160px;
   display: block;
+  margin: 0;
+  border: none;
   padding: 40px 125px 37px;
   color: #000000;
   font-family: "Raleway", "Arial", sans-serif;
@@ -1333,6 +1335,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   background-color: #f0f0f0;
+  cursor: pointer;
 }
 
 .delivery-link::before {
@@ -2288,4 +2291,76 @@ body {
 .pagination-current {
   pointer-events: none;
   color: rgba(68, 68, 68, 0.6);
+}
+
+/* Модальное окно */
+
+.modal-container {
+  /* display: none; */
+  position: fixed;
+  z-index: 15;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(240, 240, 240, 0.9);
+}
+
+.modal-container.is-open {
+  display: block;
+}
+
+.modal-delivery-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 920px;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 72px 80px;
+  border: 10px solid #000000;
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 73px;
+  right: 71px;
+  width: 26px;
+  height: 26px;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-close-button:hover.modal-close-button::before,
+.modal-close-button:hover.modal-close-button::after {
+  opacity: 0.6;
+}
+
+.modal-close-button:active.modal-close-button::before,
+.modal-close-button:active.modal-close-button::after {
+  opacity: 0.3;
+}
+
+.modal-close-button::before,
+.modal-close-button::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 36px;
+  height: 3px;
+  content: "";
+  background-color: #000000;
+}
+
+.modal-close-button::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.modal-close-button::after {
+  transform: translate(-50%, -50%) rotate(45deg);
 }
