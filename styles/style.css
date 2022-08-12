@@ -2096,6 +2096,28 @@ body {
   margin-bottom: 44px;
 }
 
+.product-card-link.new-product::after {
+  position: absolute;
+  content: "new";
+  top: 27px;
+  right: 27px;
+  width: 60px;
+  height: 60px;
+  background-color: inherit;
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 00.2em;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .product-card-link {
   position: relative;
   display: flex;
@@ -2296,7 +2318,7 @@ body {
 /* Модальное окно */
 
 .modal-container {
-  /* display: none; */
+  display: none;
   position: fixed;
   z-index: 15;
   top: 0;
