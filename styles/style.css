@@ -80,7 +80,7 @@ body {
   background-color: inherit;
   color: #000000;
   text-decoration: none;
-  padding: 10px 0;
+  padding: 10px 20px;
   cursor: pointer;
 }
 
@@ -537,7 +537,7 @@ body {
   font-size: 16px;
   line-height: 20px;
   padding-bottom: 20px;
-  z-index: 6;
+  z-index: 16;
 }
 
 .cart::after {
@@ -628,7 +628,7 @@ body {
   letter-spacing: 0.2em;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 16px 0 13px;
+  padding: 16px 20px 13px;
 }
 
 .open-cart-button:hover {
@@ -652,26 +652,28 @@ body {
   width: 30px;
   height: 30px;
   margin: 0;
-  background-color: #000000;
+  background-color: transparent;
   cursor: pointer;
 }
 
-.delete-button span {
+.delete-button::after {
   position: absolute;
+  content: "";
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 10px;
   height: 10px;
+  background-image: url("../images/icons/delete-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
   z-index: 10;
 }
 
-.delete-button:hover.delete-button::before,
 .delete-button:hover.delete-button::after {
   opacity: 0.6;
 }
 
-.delete-button:active.delete-button::before,
 .delete-button:active.delete-button::after {
   opacity: 0.3;
 }
@@ -680,28 +682,9 @@ body {
   outline: none;
 }
 
-.delete-button:focus span {
+.delete-button:focus.delete-button::after {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
-}
-
-.delete-button::before,
-.delete-button::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 14px;
-  height: 2px;
-  content: "";
-  background-color: #ffffff;
-}
-
-.delete-button::before {
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
-
-.delete-button::after {
-  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 /* Стили Футера */
@@ -745,6 +728,7 @@ body {
 
 .contacts-address {
   position: relative;
+  padding-bottom: 40px;
 }
 
 .footer-wrapper {
@@ -1209,7 +1193,7 @@ body {
 
 .services .container {
   display: flex;
-  margin: 0 auto 143px;
+  margin: 0 auto 142px;
 }
 
 
@@ -1220,12 +1204,12 @@ body {
   top: 102px;
   left: 0;
   width: 100%;
-  min-height: 288px;
+  height: calc(100% - 30px);
   background-color: #f0f0f0;
 }
 
 .services-list {
-  max-width: 285px;
+  max-width: 286px;
   margin: 0 118px 0 0;
   padding: 62px 0 63px;
   list-style-type: none;
@@ -1284,26 +1268,20 @@ body {
   display: none;
   width: 730px;
   padding: 20px 0;
+  background-repeat: no-repeat;
+  background-position: 558px;
 }
 
 .services-description-item-delivery {
-  position: absolute;
-  z-index: 2;
   background-image: url("../images/icons/delivery-icon.svg");
-  background-repeat: no-repeat;
-  background-position: 558px;
 }
 
 .services-description-item-insurance {
   background-image: url("../images/icons/insurance-icon.svg");
-  background-repeat: no-repeat;
-  background-position: 558px;
 }
 
 .services-description-item-credit {
   background-image: url("../images/icons/credit-icon.svg");
-  background-repeat: no-repeat;
-  background-position: 558px;
 }
 
 .services-description-item.is-active {
@@ -1334,7 +1312,7 @@ body {
   display: block;
   margin: 0;
   border: none;
-  padding: 40px 125px 37px;
+  padding: 40px 150px 37px 160px;
   color: #000000;
   font-family: "Raleway", "Arial", sans-serif;
   font-size: 20px;
@@ -1605,6 +1583,7 @@ body {
 
 .newsletter-form-input:disabled {
   opacity: 0.5;
+  pointer-events: none;
 }
 
 .newsletter-form-input.is-invalid {
@@ -1622,6 +1601,7 @@ body {
   padding: 15px 33px 15px 36px;
   cursor: pointer;
   border: 3px solid #c4c4c4;
+  max-width: 253px;
 }
 
 .newsletter-button:hover {
@@ -2106,6 +2086,11 @@ body {
   margin-bottom: 44px;
 }
 
+.new-product {
+  position: relative;
+  z-index: 0;
+}
+
 .product-card-link.new-product::after {
   position: absolute;
   content: "new";
@@ -2133,28 +2118,37 @@ body {
   display: flex;
   flex-wrap: wrap;
   text-decoration: none;
-  z-index: 0;
 }
 
-.product-card-link::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ffffff;
-  opacity: 0;
-}
-
-.product-card-link:hover::before {
+.product-card-link:hover .product-card-image,
+.product-card-link:hover .product-card-title {
   opacity: 0.6;
-  z-index: 1;
 }
 
-.product-card-link:active::before {
+.product-card-link.new-product:hover.new-product::after {
+  opacity: 0.6;
+}
+
+.product-card-link.new-product:active.new-product::after {
   opacity: 0.3;
-  z-index: 1;
+}
+
+.product-card-link.new-product:hover .product-card-image,
+.product-card-link.new-product:hover .product-card-title,
+.product-card-link.new-product:hover .product-price {
+  opacity: 0.6;
+}
+
+.product-card-link:active .product-card-image,
+.product-card-link:active .product-card-title,
+.product-card-link:active .product-price {
+  opacity: 0.3;
+}
+
+.product-card-link.new-product:active .product-card-image,
+.product-card-link.new-product:active .product-card-title,
+.product-card-link.new-product:active .product-price {
+  opacity: 0.3;
 }
 
 .product-card-link:hover .more-info-product {
