@@ -511,7 +511,7 @@ body {
 
 .catalog-header {
   margin-bottom: 36px;
-  padding: 44px 60px 21px
+  padding: 44px 60px 21px;
 }
 
 .user-cart-wrapper {
@@ -570,7 +570,6 @@ body {
   position: relative;
   padding: 20px 0;
 }
-
 
 .cart-item:not(:last-child) {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -855,7 +854,6 @@ body {
   background-color: #ffc700;
 }
 
-
 .footer-social-link:focus.footer-social-link::before {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
@@ -953,7 +951,7 @@ body {
 
 .slider-button:focus {
   box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #af4fff;
-  outline: none
+  outline: none;
 }
 
 .slider-button:active {
@@ -1179,12 +1177,6 @@ body {
   background-position: center;
 }
 
-/* Секция доставка */
-
-.delivery {
-  margin-bottom: 70px;
-}
-
 /* Секция сервисы */
 
 .services {
@@ -1195,7 +1187,6 @@ body {
   display: flex;
   margin: 0 auto 142px;
 }
-
 
 .services::after {
   content: "";
@@ -1305,6 +1296,10 @@ body {
 }
 
 /* Секция доставка на заказ */
+
+.delivery {
+  margin-bottom: 70px;
+}
 
 .delivery-link {
   position: relative;
@@ -1519,7 +1514,6 @@ body {
 }
 
 .newsletter .container {
-
   display: flex;
   flex-wrap: wrap;
   background-color: #f0f0f0;
@@ -1638,7 +1632,6 @@ body {
   height: 14px;
   background-image: url("../images/icons/check-mark-free.svg");
   background-repeat: no-repeat;
-  ;
 }
 
 /* Стили страницы каталога */
@@ -2504,7 +2497,6 @@ body {
 .product-wrapper {
   grid-template-columns: 540px 180px;
 }
-
 
 .amount-label {
   position: relative;
