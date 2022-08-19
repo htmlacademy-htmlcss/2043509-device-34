@@ -147,7 +147,7 @@ body {
 
 .navigation-user-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 516px 1fr;
   gap: 26px;
   margin-bottom: 30px;
   align-items: center;
@@ -155,6 +155,7 @@ body {
 
 .site-searching-wrapper {
   display: flex;
+  flex-grow: 1;
 }
 
 .site-searching {
@@ -169,7 +170,10 @@ body {
 }
 
 .site-searching-input {
-  width: 358px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 358px;
+  flex-grow: 1;
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
@@ -204,9 +208,9 @@ body {
 
 .site-searching-button {
   position: relative;
-  width: 158px;
+  min-width: 158px;
   margin: 0;
-  padding: 8px 54px;
+  padding: 8px 10px;
   color: #000000;
   font-family: inherit;
   font-size: 16px;
@@ -218,6 +222,7 @@ body {
   border-left: none;
   cursor: pointer;
 }
+
 
 .site-searching-button::before {
   position: absolute;
