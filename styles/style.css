@@ -509,7 +509,7 @@ body {
   display: grid;
 }
 
-.catalog-menu:focus-within .catalog-menu-button span::after {
+.catalog-menu:focus-within span::after {
   transform: rotate(180deg);
   transition: transform 0.3s;
 }
