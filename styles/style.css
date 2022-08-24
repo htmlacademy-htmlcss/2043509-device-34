@@ -188,6 +188,10 @@ body {
   background-position: 14px;
 }
 
+.site-searching-input:hover {
+  opacity: 0.6;
+}
+
 .site-searching-input:focus {
   outline: none;
 }
@@ -1576,6 +1580,10 @@ body {
   font-size: 18px;
   line-height: 30px;
   opacity: 0.5;
+}
+
+.newsletter-form-input:hover {
+  opacity: 0.6;
 }
 
 .newsletter-form-input:focus {
